@@ -180,11 +180,14 @@ namespace MyShogi.View.Win2D
             var readfilename = ViewModel.LastFileName == null ? null : $" - {Path.GetFileName(ViewModel.LastFileName)}";
 
             // Commercial Version GUI
+            // 「いろは煌盤」用カスタム
             bool CV_GUI = config.CommercialVersion != 0;
             if (CV_GUI)
-                Text = "将棋神やねうら王" + readfilename;
+                //Text = "将棋神やねうら王" + readfilename;
+                Text = "いろは煌盤（きらめきばん）" + readfilename;
             else
-                Text = "MyShogi" + readfilename;
+                //Text = "MyShogi" + readfilename;
+                Text = "いろは煌盤（きらめきばん）" + readfilename;
             // 商用版とどこで差別化するのか考え中
         }
 

@@ -278,7 +278,8 @@ namespace MyShogi.Model.Resource.Sounds
         /// 読み上げ用の音声のpath
         /// SoundPath配下にあるものとする。
         /// </summary>
-        public string ReadOutSoundPath = "takemata";
+        //public string ReadOutSoundPath = "takemata";
+        public string ReadOutSoundPath = "yomiage";
 
         // -- privates
 

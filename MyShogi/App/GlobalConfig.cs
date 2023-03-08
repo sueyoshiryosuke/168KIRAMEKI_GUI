@@ -26,6 +26,7 @@ namespace MyShogi.App
         /// このバージョン文字列は、Serializer.VersionStringToInt()によって数値に変換できるものとする。
         /// </summary>
         public static readonly string MYSHOGI_VERSION_STRING = "1.4.0";
+        public static readonly string KIRAMEKI_MYSHOGI_VERSION_STRING = "1.0.0";
 
         /// <summary>
         /// このファイルがシリアライズされて保存された時のバージョン文字列
@@ -63,8 +64,8 @@ namespace MyShogi.App
 
             // 対局エフェクト
 
-            EnableGameGreetingEffect = 1;
-            EnablePieceTossEffect = 1;
+            EnableGameGreetingEffect = 0;  // 1->0（非表示）
+            EnablePieceTossEffect = 0;  // 1->0（非表示）
 
             // 評価値
 
@@ -158,13 +159,14 @@ namespace MyShogi.App
             // という記事を書いて公開するのはなるべくならやめてもらいたい。
 
             // 商用版でないなら、以下の機能は強制的にオフ。
+            // 別途音声を用意するので、オンのまま
             if (CommercialVersion == 0)
             {
                 // 棋譜の読み上げ(音声素材がないため)
-                ReadOutKifu = 0;
+                ReadOutKifu = 1;  // 0->1
 
                 // 秒の読み上げ
-                ReadOutByoyomi = 0;
+                ReadOutByoyomi = 1;  // 0->1
             }
 
             // -- その他

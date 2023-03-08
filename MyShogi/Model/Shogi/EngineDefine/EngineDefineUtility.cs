@@ -34,10 +34,15 @@ namespace MyShogi.Model.Shogi.EngineDefine
             def.EngineExeName = Path.Combine(current, def.EngineExeName);
 
             // presetの1つ目に「カスタム」を挿入。
-
+            // 「いろは煌盤」用カスタム
+            /*
             var custom_preset = new EnginePreset("カスタム",
                 "カスタム・チューニングです。「詳細設定」の内容に従います。\r\n" +
                 "CPU負荷率が気になる方は、「詳細設定」の「スレッド数」のところで調整してください。");
+            */
+            var custom_preset = new EnginePreset("カスタム",
+                "2022年度の日本工学院専門学校蒲田校AIシステム科の学生と講師が作った将棋エンジンです。\r\n" +
+                "「setting.bat」で設定変更できます。");
             def.Presets.Insert(0, custom_preset);
 
             return def;

@@ -7,8 +7,8 @@
     <ProjectGuid>{A821BFE7-A6FF-40A2-B214-11EE3F37F159}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>MyShogi</RootNamespace>
-    <AssemblyName>MyShogi</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AssemblyName>168kirameki-gui</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>false</IsWebBootstrapper>
@@ -49,11 +49,9 @@
     <WarningLevel>4</WarningLevel>
     <LangVersion>7.3</LangVersion>
   </PropertyGroup>
+  <PropertyGroup />
   <PropertyGroup>
-    <ApplicationManifest>app.manifest</ApplicationManifest>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationIcon>YaneuraOu.ico</ApplicationIcon>
+    <ApplicationIcon>168kirameki-gui.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'macOS|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
@@ -76,6 +74,9 @@
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App\ConfigMigrater.cs" />
@@ -536,6 +537,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Win2D\Setting\EngineDefineEditDialogOld.resx">
       <DependentUpon>EngineDefineEditDialogOld.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Win2D\Setting\EngineSubSettingDialog.resx">
       <DependentUpon>EngineSubSettingDialog.cs</DependentUpon>
@@ -616,6 +618,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="168kirameki-gui.ico" />
     <Content Include="YaneuraOu.ico" />
     <None Include="docs\WIP.md" />
     <Content Include="docs\更新履歴.txt" />

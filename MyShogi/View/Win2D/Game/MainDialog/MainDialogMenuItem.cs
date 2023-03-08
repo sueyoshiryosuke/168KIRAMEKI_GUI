@@ -412,6 +412,7 @@ namespace MyShogi.View.Win2D
                     item_playgame.DropDownItems.Add(new ToolStripSeparator());
 
                     { // -- 検討モード
+                        /*  検討モード非対応なのでコメントアウト。
 
                         var item = new ToolStripMenuItem();
                         item.Text = consideration ? "検討モードを終了する(&C)" : "検討エンジン設定(&C)"; // ConsiderationMode
@@ -429,6 +430,8 @@ namespace MyShogi.View.Win2D
                             };
 
                         item_playgame.DropDownItems.Add(item);
+
+                        */
                     }
 
 
@@ -436,6 +439,7 @@ namespace MyShogi.View.Win2D
                     //toolStripButton6.Enabled = !inTheGame;
 
                     { // -- 検討モード
+                        /*  詰検討モード非対応なのでコメントアウト。
 
                         var item = new ToolStripMenuItem();
                         item.Text = mate_consideration ? "詰検討モードを終了する(&M)" : "詰検討エンジン設定(&M)"; // MateMode
@@ -455,9 +459,11 @@ namespace MyShogi.View.Win2D
                             };
 
                         item_playgame.DropDownItems.Add(item);
+
+                        */
                     }
 
-                    item_playgame.DropDownItems.Add(new ToolStripSeparator());
+                    //item_playgame.DropDownItems.Add(new ToolStripSeparator());  // 検討系の機能は非対応なのでコメントアウト
 
                     { // -- 対局結果一覧
 
@@ -516,7 +522,9 @@ namespace MyShogi.View.Win2D
                 {
                     var item = new ToolStripMenuItem();
                     item.Text = "音声設定 (&S)"; // Sound setting
-                    item.Enabled = config.CommercialVersion != 0; // 商用版のみ選択可
+                    // 音声を別途用意するので選択可に変更
+                    //item.Enabled = config.CommercialVersion != 0; // 商用版のみ選択可
+                    item.Enabled = config.CommercialVersion == 0; // 音声を別途用意するので選択可
                     item.Click += (sender, e) =>
                     {
                         using (var dialog = new SoundSettingDialog())
@@ -577,6 +585,7 @@ namespace MyShogi.View.Win2D
 
                 // -- 外部思考エンジンの追加(engine_define.xmlの編集)
                 {
+                /*  詰検討モード非対応なのでコメントアウト。
                     var item_edit_engine_define = new ToolStripMenuItem();
                     item_edit_engine_define.Text = "外部思考エンジンの利用(&U)";
                     item_edit_engine_define.Click += (sender, e) =>
@@ -588,6 +597,7 @@ namespace MyShogi.View.Win2D
                         }
                     };
                     item_settings.DropDownItems.Add(item_edit_engine_define);
+                */
                 }
 
 
@@ -1267,6 +1277,7 @@ namespace MyShogi.View.Win2D
                     menu.Items.Add(item_others);
 
                     {
+                        /*  「いろは煌盤」用カスタムのためコメントアウト
                         var item1 = new ToolStripMenuItem();
                         item1.Text = "よくある質問 (&F)"; // Faq
                         item1.Click += (sender, e) =>
@@ -1277,15 +1288,20 @@ namespace MyShogi.View.Win2D
                             System.Diagnostics.Process.Start(url);
                         };
                         item_others.DropDownItems.Add(item1);
+
+                        */
                     }
 
                     {
                         var item1 = new ToolStripMenuItem();
-                        item1.Text = "操作説明(オンラインマニュアル) (&M)"; // Manual
+                        //item1.Text = "操作説明(オンラインマニュアル) (&M)"; // Manual
+                        item1.Text = "いろは煌盤（きらめきばん）公式サイト (&M)"; // 十六式いろは煌（きらめき）用カスタム
                         item1.Click += (sender, e) =>
                         {
                                 // MyShogi公式のonline manual
-                                var url = "https://github.com/yaneurao/MyShogi/tree/master/MyShogi/docs/online_manual.md";
+                                //var url = "https://github.com/yaneurao/MyShogi/tree/master/MyShogi/docs/online_manual.md";
+                                // 十六式いろは煌（きらめき）の公式サイト（GitHub）
+                                var url = "https://github.com/sueyoshiryosuke/168KIRAMEKI_GUI";
 
                             System.Diagnostics.Process.Start(url);
                         };
@@ -1326,9 +1342,11 @@ namespace MyShogi.View.Win2D
                         item_others.DropDownItems.Add(item1);
                     }
 
-                    item_others.DropDownItems.Add(new ToolStripSeparator());
+                    //item_others.DropDownItems.Add(new ToolStripSeparator());  // 十六式いろは煌（きらめき）用カスタムのためコメントアウト
 
                     {
+                        /*  「いろは煌盤」用カスタムのためコメントアウト
+                        
                         var item1 = new ToolStripMenuItem();
                         item1.Text = "アップデートの確認(&U)"; // Update
                         item1.Click += (sender, e) =>
@@ -1343,6 +1361,8 @@ namespace MyShogi.View.Win2D
                                 System.Diagnostics.Process.Start(url);
                         };
                         item_others.DropDownItems.Add(item1);
+
+                        */
                     }
 
                 }

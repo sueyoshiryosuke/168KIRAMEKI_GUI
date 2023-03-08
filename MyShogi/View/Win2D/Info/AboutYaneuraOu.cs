@@ -38,19 +38,20 @@ namespace MyShogi.View.Win2D
 
             using (var slb = new SuspendLayoutBlock(this))
             {
+                // 「いろは煌盤」用カスタム
                 var commercial = TheApp.app.Config.CommercialVersion;
-                var message1 = "MyShogi Version " + GlobalConfig.MYSHOGI_VERSION_STRING;
+                var message1 =
+                    "いろは煌盤（きらめきばん） Version " + GlobalConfig.KIRAMEKI_MYSHOGI_VERSION_STRING + "\r\n" +
+                    "Base: MyShogi Version " + GlobalConfig.MYSHOGI_VERSION_STRING + "\r\n";
                 var message2 =
                      commercial == 0 ?
-                    "MyShogiは、2018年にマイナビ出版から発売する『将棋神やねうら王』用のGUIとして開発をスタートしました。" +
-                    "オープンソースの将棋ソフト用GUIです。(ただし画面素材等の単体配布、流用は不可です。)\r\n" +
-                    "MyShogi Project: https://github.com/yaneurao/MyShogi"
+                    "(C)2022-2023 いろは煌盤（きらめきばん）"
                     : "(C)2018 Mynavi Publishing Corporation / MyShogi Project\r\nMyShogi Project : https://github.com/yaneurao/MyShogi";
 
                 label1.Text = message1;
                 textBox1.Text = message2;
 
-                pictureBox1.Image = TheApp.app.ImageManager.GameLogo.image;
+                //pictureBox1.Image = TheApp.app.ImageManager.GameLogo.image;
             }
         }
     }

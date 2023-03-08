@@ -4,12 +4,14 @@ using System.Runtime.InteropServices;
 // アセンブリに関する一般情報は以下の属性セットをとおして制御されます。
 // アセンブリに関連付けられている情報を変更するには、
 // これらの属性値を変更してください。
-[assembly: AssemblyTitle("MyShogi")]
+// 「いろは煌盤」用カスタム
+//[assembly: AssemblyTitle("MyShogi")]
+[assembly: AssemblyTitle("いろは煌盤（いろはきらめきばん）")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("MyShogi")]
-[assembly: AssemblyCopyright("Copyright ©  2018-2020")]
+[assembly: AssemblyProduct("168KIRAMEKI_GUI")]
+[assembly: AssemblyCopyright("Copyright ©  2022-2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

@@ -26,8 +26,9 @@ namespace MyShogi.View.Win2D.Setting
             binder.BindToInt(config, "PieceSoundOffTheGame", checkBox3);
 
             // 棋譜読み上げは、商用版のみ選択可能
-
-            if (config.CommercialVersion != 0)
+            // 音声は別途用意するので、OSS版でも選択可能に変更
+            //if (config.CommercialVersion != 0)
+            if (config.CommercialVersion == 0)
             {
                 binder.BindToInt(config, "ReadOutKifu", checkBox4 , (e) => groupBox2.Enabled = e);
                 binder.BindToInt(config, "ReadOutGreeting", checkBox5);
