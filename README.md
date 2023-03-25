@@ -14,7 +14,7 @@
 　　　　　　　　　　（「いろは煌盤（きらめきばん）」の同梱版、非同梱版あり）  
 【将棋AIエンジンとセット】  
 　将棋ソフト「十六式いろは煌（きらめき）2022冬セット」  
-　　https://github.com/sueyoshiryosuke/16shiki-Iroha_kirameki/releases/tag/2022winter-cpu-set  
+　　https://github.com/sueyoshiryosuke/16shiki-Iroha_kirameki/releases/tag/2022winter-set  
 【基になったソフト】  
 　MyShogi 　　　　https://github.com/yaneurao/MyShogi  
   
@@ -52,4 +52,4 @@
 ・ビルドした実行ファイルに必要なファイル群  
 以下のセットに含めています。  
 　将棋ソフト「十六式いろは煌（きらめき）2022冬セット」  
-　https://github.com/sueyoshiryosuke/16shiki-Iroha_kirameki/releases/tag/2022winter-cpu-set  
+　https://github.com/sueyoshiryosuke/16shiki-Iroha_kirameki/releases/tag/2022winter-set  
